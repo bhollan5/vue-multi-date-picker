@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="dp-footer" v-show="multi">
-          <div class="btn btn-cancel" @click="cancelSelect">{{display.cancel}}</div>
+<!--          <div class="btn btn-cancel" @click="cancelSelect">{{display.cancel}}</div>-->
           <div class="btn btn-ok" @click="submitSelect(selected)">{{display.ok}}</div>
         </div>
       </div>

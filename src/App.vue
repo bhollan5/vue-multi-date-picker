@@ -4,7 +4,9 @@
     <div class="wrapper">
       
       <m-date-picker v-model="date" :multi="true"
-      :disp="['日', '一', '二', '三', '四', '五', '六','年', '月', 'Cancel', 'OK']" ></m-date-picker>
+                     :markedGreen="currentShows"
+      :disp="['日', '一', '二', '三', '四', '五', '六','年', '月', 'Cancel', 'OK']" >
+      </m-date-picker>
       
 <!--      To change the language to English, use this instead:-->
 <!--
@@ -24,8 +26,20 @@ export default {
   name: 'app',
   data () {
     return {
-      date: []
+      date: [],
+      currentShows: [],
     }
+  },
+  methods: {
+    populateCurrentShows() {
+      this.currentShows.push(new Date());
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      this.currentShows.push(tomorrow)
+    }
+  },
+  mounted() {
+    this.populateCurrentShows();
   }
 }
 </script>

@@ -31,6 +31,18 @@ export default {
       type: Array|String| Date,
       default: []
     },
+    // Takes an array of dates where there are already shows
+    markedGreen: {
+      type: Array,
+      default: []
+    },
+    // Takes an array of dates where there are already requests
+    markedYellow: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
     lang: {
       type: String,
       default: 'zh'
@@ -80,6 +92,24 @@ export default {
       }
       for (let i = 0; i < this.selected.length; i++) {
         if (this.selected[i].getTime() == item.date.getTime()) {
+          return i
+        }
+      }
+      return -1
+    },
+    markGreen: function (item) {
+      if (!this.multi || !this.markedGreen) {
+        return -1
+      }
+      for (let i = 0; i < this.markedGreen.length; i++) {
+        
+        console.log(this.markedGreen[i].getDate(), item.date.getDate());
+        
+        if (this.markedGreen[i].getDate() == item.date.getDate()
+           && this.markedGreen[i].getMonth() == item.date.getMonth()
+           && this.markedGreen[i].getYear() == item.date.getYear()) {
+          console.warn(this.markedGreen[i].getDate() == item.date.getDate())
+
           return i
         }
       }

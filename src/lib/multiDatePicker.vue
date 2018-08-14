@@ -33,7 +33,12 @@
             <div class="cal-item" 
             @click="toggleSelect(item)" 
             v-for="(item,index) in renderCalendar" :key="index" 
-            :class="[item.iscur? 'cal-enable' : 'cal-disable', selectIndex(item) >= 0  ? 'cal-select' : '']">
+            :class="[
+                    item.iscur? 'cal-enable' : 'cal-disable', 
+                    selectIndex(item) >= 0  ? 'cal-select' : '',
+                    markGreen(item) >= 0 ? 'mark-green' : '',
+                    ]"
+                 >
               {{item.label}}
             </div>
           </div>

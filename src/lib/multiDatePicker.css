@@ -81,7 +81,28 @@
   cursor: default
 }
 .cal-select{
-  background-color: #61C3FF
+  background-color: #61C3FF;
+}
+.mark-green:not(.cal-select):after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #61C3FF;
+  .cal-select {
+    background-color: white;
+  }
+}
+.mark-green:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 10px;
+  background-color: white;
 }
 
 .btn-ok{

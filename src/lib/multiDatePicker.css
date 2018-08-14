@@ -20,7 +20,7 @@
 }
 .pick-panel{
   width: 280px;
-  position: absolute;
+/*  position: absolute;*/
   display: flex;
   flex-direction: column;
   justify-content: center;

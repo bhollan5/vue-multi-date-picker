@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="dp-mask" v-show="panelShow" @click="panelShow = false"></div>
-    <div class="selected-date" @click="panelShow = !panelShow">
+    <div class="selected-date" @click="panelShow = !panelShow" v-if="false">
       <div style="display: flex;flex-wrap: wrap;" v-if="multi">
         <div class="sel-values" v-for="(item,index) in selected" :key="index" >
           {{item.toLocaleDateString()}}

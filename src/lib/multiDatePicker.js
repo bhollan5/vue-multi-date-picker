@@ -3,7 +3,7 @@ export default {
   name: 'mDatePicker',
   data() {
     return {
-      panelShow: false,
+      panelShow: true,
       seleDate: new Date(),
       seleYear: new Date().getFullYear(),
       seleMonth: new Date().getMonth(),

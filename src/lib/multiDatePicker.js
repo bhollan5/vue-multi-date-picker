@@ -103,12 +103,12 @@ export default {
       }
       for (let i = 0; i < this.markedGreen.length; i++) {
         
-        console.log(this.markedGreen[i].getDate(), item.date.getDate());
+//        console.log(this.markedGreen[i].getDate(), item.date.getDate());
         
         if (this.markedGreen[i].getDate() == item.date.getDate()
            && this.markedGreen[i].getMonth() == item.date.getMonth()
            && this.markedGreen[i].getYear() == item.date.getYear()) {
-          console.warn(this.markedGreen[i].getDate() == item.date.getDate())
+//          console.warn(this.markedGreen[i].getDate() == item.date.getDate())
 
           return i
         }

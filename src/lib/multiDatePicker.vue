@@ -12,7 +12,7 @@
       </div>
     </div>
     <transition name="smooth">
-      <div class="pick-panel" v-show="panelShow">
+      <div class="pick-panel" v-show="true">
         <div class="dp-header">
           <div class="btn btn-link last-year" @click="seleYear--"></div>
           <div class="btn btn-link last-month" @click="changeMonth(-1)"></div>

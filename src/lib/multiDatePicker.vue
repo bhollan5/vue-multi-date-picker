@@ -37,6 +37,7 @@
                     item.iscur? 'cal-enable' : 'cal-disable', 
                     selectIndex(item) >= 0  ? 'cal-select' : '',
                     markGreen(item) >= 0 ? 'mark-green' : '',
+                    markRed(item) >= 0 ? 'mark-red' : '',
                     ]"
                  >
               {{item.label}}

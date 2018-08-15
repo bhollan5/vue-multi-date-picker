@@ -37,7 +37,7 @@ export default {
       default: []
     },
     // Takes an array of dates where there are already requests
-    markedYellow: {
+    markedRed: {
       type: Array,
       default() {
         return []
@@ -115,6 +115,20 @@ export default {
       }
       return -1
     },
+    markRed: function(item) {
+      if (!this.multi || !this.markedRed) {
+        return -1
+      }
+      for (let i = 0; i < this.markedRed.length; i++) {
+                
+        if (this.markedRed[i].getDate() == item.date.getDate()
+           && this.markedRed[i].getMonth() == item.date.getMonth()
+           && this.markedRed[i].getYear() == item.date.getYear()) {
+          return i
+        }
+      }
+      return -1
+    },
     cancelSelect: function () {
       if (this.multi) {
         this.selected.splice(0, this.selected.length)
@@ -127,6 +141,9 @@ export default {
       if (!this.multi) {
         this.submitSelect(item.date)
       } else {
+        if (this.markRed(item) >= 0) {
+          return;
+        }
         let index = this.selectIndex(item)
         if (index < 0) {
           this.selected.push(item.date)

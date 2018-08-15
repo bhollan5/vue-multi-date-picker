@@ -70,10 +70,10 @@
   align-items: center;
   margin: 1px;
 }
-.cal-enable{
+.cal-enable:not(.mark-red){
   cursor: pointer;
 }
-.cal-enable:hover{
+.cal-enable:not(.mark-red):hover{
   background-color: #E4E8F1;
 }
 .cal-disable{
@@ -83,7 +83,7 @@
 .cal-select{
   background-color: #61C3FF;
 }
-.mark-green:not(.cal-select):after {
+.mark-green:not(.cal-select):not(.mark-red):after {
   content: '';
   width: 7px;
   height: 7px;
@@ -103,6 +103,20 @@
   position: absolute;
   margin-top: 10px;
   background-color: white;
+}
+
+.mark-red {
+  opacity: .5;
+  
+}
+.mark-red:after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 10px;
+  background-color: red;
 }
 
 .btn-ok{

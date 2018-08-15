@@ -5,6 +5,7 @@
       
       <m-date-picker v-model="date" :multi="true"
                      :markedGreen="currentShows"
+                     :markedRed="yourShows"
       :disp="['日', '一', '二', '三', '四', '五', '六','年', '月', 'Cancel', 'OK']" >
       </m-date-picker>
       
@@ -28,6 +29,7 @@ export default {
     return {
       date: [],
       currentShows: [],
+      yourShows: []
     }
   },
   methods: {
@@ -36,10 +38,25 @@ export default {
       var tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate() + 1);
       this.currentShows.push(tomorrow)
+      var day1 = new Date();
+      day1.setDate(day1.getDate() + 3);
+      this.currentShows.push(day1);
+    },
+    populateYourShows() {
+      var day1 = new Date();
+      day1.setDate(day1.getDate() + 3);
+      this.yourShows.push(day1);
+      var day2 = new Date();
+      day2.setDate(day2.getDate() + 5);
+      this.yourShows.push(day2)
+      var day3 = new Date();
+      day3.setDate(day3.getDate() + 6);
+      this.yourShows.push(day3)
     }
   },
   mounted() {
     this.populateCurrentShows();
+    this.populateYourShows();
   }
 }
 </script>

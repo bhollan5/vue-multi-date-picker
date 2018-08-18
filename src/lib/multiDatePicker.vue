@@ -36,7 +36,7 @@
             :class="[
                     item.iscur? 'cal-enable' : 'cal-disable', 
                     selectIndex(item) >= 0  ? 'cal-select' : '',
-                    markGreen(item) >= 0 ? 'mark-green' : '',
+                    markBlue(item) >= 0 ? 'mark-blue' : '',
                     markRed(item) >= 0 ? 'mark-red' : '',
                     ]"
                  >

@@ -27,12 +27,13 @@ export default {
       type: Boolean,
       default: true,
     },
+    // This will be what's v-modelled
     value:{
       type: Array|String| Date,
       default: []
     },
     // Takes an array of dates where there are already shows
-    markedGreen: {
+    markedBlue: {
       type: Array,
       default: []
     },
@@ -97,18 +98,18 @@ export default {
       }
       return -1
     },
-    markGreen: function (item) {
-      if (!this.multi || !this.markedGreen) {
+    markBlue: function (item) {
+      if (!this.multi || !this.markedBlue) {
         return -1
       }
-      for (let i = 0; i < this.markedGreen.length; i++) {
+      for (let i = 0; i < this.markedBlue.length; i++) {
         
-//        console.log(this.markedGreen[i].getDate(), item.date.getDate());
+//        console.log(this.markedBlue[i].getDate(), item.date.getDate());
         
-        if (this.markedGreen[i].getDate() == item.date.getDate()
-           && this.markedGreen[i].getMonth() == item.date.getMonth()
-           && this.markedGreen[i].getYear() == item.date.getYear()) {
-//          console.warn(this.markedGreen[i].getDate() == item.date.getDate())
+        if (this.markedBlue[i].getDate() == item.date.getDate()
+           && this.markedBlue[i].getMonth() == item.date.getMonth()
+           && this.markedBlue[i].getYear() == item.date.getYear()) {
+//          console.warn(this.markedBlue[i].getDate() == item.date.getDate())
 
           return i
         }

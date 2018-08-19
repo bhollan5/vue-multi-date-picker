@@ -83,7 +83,7 @@
 .cal-select{
   background-color: #61C3FF;
 }
-.mark-green:not(.cal-select):not(.mark-red):after {
+.mark-blue:not(.cal-select):not(.mark-red):after {
   content: '';
   width: 7px;
   height: 7px;
@@ -95,7 +95,7 @@
     background-color: white;
   }
 }
-.mark-green:after {
+.mark-blue:after {
   content: '';
   width: 7px;
   height: 7px;

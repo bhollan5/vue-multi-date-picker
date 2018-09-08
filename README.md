@@ -6,6 +6,12 @@
 ## [Demo](http://demo.oldzeng.com/)
 > A date picker for vue2.x support multi selection
 
+## Installing/Updating as a dependency to a project
+
+```
+npm instal --save https://github.com/bhollan5/vue-multi-date-picker/tarball/sellout
+```
+
 ## Build Setup
 
 ``` bash

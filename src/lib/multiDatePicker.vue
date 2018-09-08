@@ -35,6 +35,7 @@
             v-for="(item,index) in renderCalendar" :key="index" 
             :class="[
                     item.iscur? 'cal-enable' : 'cal-disable', 
+                    isPast(item) ? 'cal-disable' : 'cal-enable',
                     selectIndex(item) >= 0  ? 'cal-select' : '',
                     markBlue(item) >= 0 ? 'mark-blue' : '',
                     markRed(item) >= 0 ? 'mark-red' : '',

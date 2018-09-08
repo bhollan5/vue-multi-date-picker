@@ -98,6 +98,11 @@ export default {
       }
       return -1
     },
+    isPast: function(item) {
+      var today = new Date();
+      today.setDate(today.getDate() - 1);
+      return (item.date < today)
+    },
     markBlue: function (item) {
       if (!this.multi || !this.markedBlue) {
         return -1

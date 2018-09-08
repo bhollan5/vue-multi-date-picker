@@ -4,7 +4,7 @@
     <div class="wrapper">
       
       <m-date-picker v-model="date" :multi="true"
-                     :markedGreen="currentShows"
+                     :markedBlue="currentShows"
                      :markedRed="yourShows"
       :disp="['日', '一', '二', '三', '四', '五', '六','年', '月', 'Cancel', 'OK']" >
       </m-date-picker>
